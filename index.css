@@ -1,0 +1,13 @@
+#Banner {
+    position : absolute;
+    left : 50%;
+    top : 0px;
+    transform : translate(-50%, 0);
+}
+
+#Upper {
+    position : absolute;
+    left : 50%;
+    top : 120px;
+    transform : translate(-50%, 0);
+}
