@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Dodge Game</title>
+        <style>
+            @font-face {
+                font-family: "neodgm";
+                src: url("Font/neodgm.ttf");
+            }
+
+            body {
+                touch-action: none;
+                overscroll-behavior: none;
+            }
+
+            #Screen {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                max-height: 96%;
+                max-width: 96%;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="Screen" width="1280" height="800"></canvas>
+        <script src="Script/UI.js"></script>
+        <script src="Script/Var.js"></script>
+        <script src="Script/Prototype.js"></script>
+        <script src="Script/Primitive.js"></script>
+
+        <script src="Script/Webgl.js"></script>
+        <script src="Script/Physics.js"></script>
+        <script src="Script/Render.js"></script>
+        <script src="Script/Game.js"></script>
+        
+        <script src="Script/Scene.js"></script>
+        
+        <script src="Script/Main.js"></script>
+    </body>
+</html>
