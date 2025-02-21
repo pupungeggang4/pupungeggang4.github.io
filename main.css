@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'neodgm';
+    src: url('Font/neodgm.ttf');
+}
+
+#header {
+    font-family: 'neodgm';
+    font-size: 32px;
+}

@@ -1,3 +1,4 @@
 const UI = {
-    text: [4, 4]
+    text: [8, 8],
+    text2: [8, 760]
 }
