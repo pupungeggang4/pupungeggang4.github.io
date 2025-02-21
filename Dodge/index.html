@@ -2,31 +2,18 @@
 <html>
     <head>
         <title>Web Dodge Game</title>
-        <style>
-            @font-face {
-                font-family: "neodgm";
-                src: url("Font/neodgm.ttf");
-            }
-
-            body {
-                touch-action: none;
-                overscroll-behavior: none;
-            }
-
-            #Screen {
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                margin: auto;
-                max-height: 96%;
-                max-width: 96%;
-            }
-        </style>
+            <link rel="stylesheet" href="../main.css"></link>
     </head>
     <body>
-        <canvas id="Screen" width="1280" height="800"></canvas>
+        <a href="..">Back</a>
+        <div id="container">
+            <script src="../load.js"></script>
+            <div id="header">
+            </div>
+            <div id="screenarea">
+                <!-- <canvas id="Screen" width="1280" height="800"></canvas> -->
+            </div>
+        </div>
         <script src="Script/UI.js"></script>
         <script src="Script/Var.js"></script>
         <script src="Script/Prototype.js"></script>
