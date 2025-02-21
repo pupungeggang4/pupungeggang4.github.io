@@ -25,7 +25,7 @@ const vSource = `#version 300 es
             0.0, 0.0, -2.0 / (1.0 + 1.0), 0.0,
             -(1280.0 + 0.0) / (1280.0 - 0.0), -(0.0 + 800.0) / (0.0 - 800.0), -(0.0) / (2.0), 1.0
         );
-        vec4 pos = a_position;
+        vec4 pos = vec4(a_texcoord, 0.0, 1.0);
         pos = m_scale * pos;
         pos = m_translate * pos;
         pos = m_proj * pos;
@@ -69,14 +69,7 @@ function glInit() {
     luMode = gl.getUniformLocation(program, "u_mode")
     laPosition = gl.getAttribLocation(program, "a_position")
     laTexcoord = gl.getAttribLocation(program, "a_texcoord")
-   
-    gt = gl.createTexture()
-    gl.bindTexture(gl.TEXTURE_2D, gt)
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE)
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST)
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST)
-
+    
     vao = gl.createVertexArray()
     vbo = gl.createBuffer(gl.ARRAY_BUFFER)
     bt = gl.createBuffer(gl.ARRAY_BUFFER)
@@ -84,12 +77,12 @@ function glInit() {
     gl.bindVertexArray(vao)
     gl.bindBuffer(gl.ARRAY_BUFFER, vbo)
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-        0.5, -0.5, 1.0, 0.0,
-        0.5, 0.5, 1.0, 1.0,
-        -0.5, -0.5, 0.0, 0.0,
-        -0.5, -0.5, 0.0, 0.0,
-        0.5, 0.5, 1.0, 1.0,
-        -0.5, 0.5, 0.0, 1.0
+        1.0, -1.0, 1.0, 0.0,
+        1.0, 1.0, 0.0, 0.0,
+        -1.0, -1.0, 1.0, 1.0,
+        -1.0, -1.0, 1.0, 1.0,
+        1.0, 1.0, 0.0, 0.0,
+        -1.0, 1.0, 0.0, 1.0
     ]), gl.STATIC_DRAW)
     gl.vertexAttribPointer(laPosition, 2, gl.FLOAT, false, 4 * 4, 0)
     gl.enableVertexAttribArray(laPosition)
