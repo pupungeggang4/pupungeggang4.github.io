@@ -3,7 +3,7 @@ window.onerror = errorHandle
 window.oncontextmenu = rightClick
 
 function main() {
-    canvas = document.getElementById('Screen')
+    canvas = document.getElementById('screen')
     gl = canvas.getContext('webgl2')
     canvasUI = document.createElement('canvas')
     canvasUI.width = 1280

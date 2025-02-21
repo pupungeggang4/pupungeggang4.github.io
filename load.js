@@ -3,7 +3,7 @@ window.addEventListener('load', load, false)
 const header = `
     <div>Pupungeggang4's Blog</div>
     <div>
-        <a href="Dodge/">Dodge</a>
+        <a href="/Dodge/">Dodge</a>
     </div>
 `
 
