@@ -30,17 +30,13 @@ body {
     height: 80px;
 }
 
-#screenarea {
-    border: 2px solid red;
-    flex-grow: 1;
-
-    position: relative;
-}
-
 #screen {
     position: absolute;
     left: 0;
     right: 0;
+    top: 0;
+    bottom: 0;
     margin: auto;
-    height: 100%;
+    max-width: 96%;
+    max-height: 96%;
 }
