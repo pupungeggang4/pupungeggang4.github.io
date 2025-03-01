@@ -40,3 +40,8 @@ body {
     max-width: 96%;
     max-height: 96%;
 }
+
+#main {
+    font-family: neodgm;
+    font-size: 16px;
+}
