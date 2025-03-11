@@ -10,4 +10,5 @@ const header = `
 
 function load() {
     document.getElementById('header').innerHTML = header
+    eruda.init()
 }
