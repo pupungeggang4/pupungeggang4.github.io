@@ -5,6 +5,7 @@ const header = `
     <div>
         <a href="/WebGL-Playground/Dodge/">Dodge</a>
         <a href="/Blog/BlogMain.html">Blog</a>
+        <a href="/Projects/ProjectMain.html">Projects</a>
     </div>
 `
 
